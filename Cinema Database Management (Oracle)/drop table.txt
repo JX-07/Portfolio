@@ -1,0 +1,15 @@
+drop table payment;
+drop table ticketbooking;
+drop table hallbooking;
+drop table movie;
+drop table cinema;
+drop table mealorder;
+drop table menu;
+drop table pointredemption; 
+drop table complimentaryitem;
+drop table specialpromotion;
+drop table pointprogram;
+drop table membership;
+drop table customer;
+
+start C:\CINEMA.txt
