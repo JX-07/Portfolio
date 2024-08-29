@@ -1,0 +1,117 @@
+// DETAIL REPORT OF MEMBERSHIP ACTIVE REMAINING DAYS
+ACCEPT acceptDate DATE PROMPT "Enter Report Date (Before 27-APR-24)[dd-MON-yy]  >  "
+
+SET LINESIZE 150
+SET PAGESIZE 50
+COLUMN "Expiry Month Number" NOPRINT
+COLUMN "Expiry Year" NOPRINT
+COLUMN membership_ID HEADING "Member ID" FORMAT A10
+COLUMN expiry_date HEADING "Expiry Date" FORMAT A12
+COLUMN status HEADING "Status" FORMAT A8
+BREAK ON "Expiry Month" ON REPORT
+COMPUTE COUNT LABEL "Total" OF membership_ID ON REPORT
+
+TTITLE CENTER "Detail Report Of Active Membership Remaining Days" SKIP 1 -
+	LEFT "Report Date: " &acceptDate 
+
+
+
+
+SELECT 
+	c.customer_name AS "Name", 
+	m.membership_ID,
+	TO_CHAR(TRUNC(m.expiry_date, 'MONTH'), 'Month - YYYY') AS "Expiry Month", 
+	m.expiry_date , 
+	m.status, 
+	(m.expiry_date - TO_DATE('&acceptDate', 'dd-MON-yy'))AS "Days Remaining",
+ 	EXTRACT(MONTH FROM m.expiry_date) AS "Expiry Month Number",
+	EXTRACT(YEAR FROM m.expiry_date) AS "Expiry Year"
+FROM 
+	customer c 
+JOIN membership m ON c.customer_ID = m.customer_ID
+WHERE (m.expiry_date > TO_DATE('&acceptDate', 'dd-MON-yy') 
+AND m.status = 'Active') 
+ORDER BY      
+	EXTRACT(YEAR FROM m.expiry_date),
+	EXTRACT(MONTH FROM m.expiry_date);
+
+// Detail Report of membership Expiry Rate
+	
+ACCEPT acceptDate DATE PROMPT "Enter Report Date (Before 27-APR-24)[dd-MON-yy]  >  "
+
+SET LINESIZE 110
+SET PAGESIZE 50
+COLUMN "Member Percent" FORMAT A15
+COLUMN "Expired Percent" FORMAT A15
+COLUMN "Active Percent" FORMAT A15
+
+
+TTITLE CENTER "Detail Report Of Membership Status" SKIP 1-
+	RIGHT 'Page:' FORMAT 999 SQL.PNO -
+	LEFT "Report Date: " &acceptDate SKIP 2
+
+SELECT 
+	COUNT(c.customer_ID) AS "Customer Count",
+	COUNT(m.membership_ID) AS "Member Count",  
+	ROUND(((COUNT(m.membership_ID) / COUNT(c.customer_ID))*100) , 2) || '%' AS "Member Percent",
+	COUNT(CASE WHEN m.status = 'Expired' THEN 1 END) AS "Expiry Count", 
+	ROUND(((COUNT(CASE WHEN m.status = 'Expired' THEN 1 END) / COUNT(m.membership_ID))*100), 2) || '%' AS "Expired Percent",
+	COUNT(CASE WHEN m.status = 'Active' THEN 1 END) AS "Active Count",
+	ROUND(((COUNT(CASE WHEN m.status = 'Active' THEN 1 END) /  COUNT(m.membership_ID))*100), 2) || '%' AS "Active Percent"
+FROM 
+	customer c
+FULL OUTER JOIN  membership m ON c.customer_ID = m.customer_ID
+HAVING (COUNT(m.membership_ID) > 0);
+
+
+
+
+
+// Detail report of Ticket Sales (By Month)
+ACCEPT acceptYear NUMBER PROMPT "Enter Year (E.g 2024) >  "
+
+SET FEEDBACK OFF
+SET LINESIZE 100
+SET PAGESIZE 50
+BREAK ON year SKIP PAGE
+COLUMN Month_order NOPRINT;
+COLUMN 'Revenue Number' FORMAT $999,999.99
+
+COMPUTE SUM LABEL "Total " OF 'Ticket Count' 'Meal Order Count' 'Revenue Number' ON 'Year'
+TTITLE CENTER 'Detail Report Of Ticket Sales (Monthly)'  SKIP 1 -
+	LEFT 'Report Date: '  &_DATE -
+	RIGHT 'Page:' FORMAT 999 SQL.PNO SKIP 2
+
+
+
+SELECT 
+	TO_CHAR(tb.schedule_date, 'Month') AS "Month",
+	EXTRACT(YEAR FROM tb.schedule_date) AS "Year",
+	EXTRACT(MONTH FROM tb.schedule_date) AS "MONTH_ORDER",
+	COUNT(tb.ticket_ID) AS "Ticket Count",
+	SUM(CASE WHEN tb.mealorder_ID IS NOT NULL THEN 1 END) AS "Meal Order Count",
+	SUM(tb.ticket_price) AS "Revenue Number"
+FROM 
+	ticketbooking tb
+LEFT JOIN mealorder mo ON tb.mealorder_ID = mo.mealorder_ID
+GROUP BY
+	EXTRACT(YEAR FROM tb.schedule_date) ,
+	TO_CHAR(tb.schedule_date, 'Month'),
+	EXTRACT(MONTH FROM tb.schedule_date)
+HAVING
+	EXTRACT(YEAR FROM tb.schedule_date) = &acceptYear
+ORDER BY
+	EXTRACT(YEAR FROM tb.schedule_date),
+	EXTRACT(MONTH FROM tb.schedule_date);
+
+
+
+
+SET FEEDBACK ON
+
+
+
+TO_CHAR(TRUNC(m.expiry_date, 'MONTH'), 'Month - YYYY'), "Days Remaining";
+
+
+COMPUTE SUM OF "Days Remaining" ON "Expiry Month" 

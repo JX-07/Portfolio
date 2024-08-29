@@ -1,0 +1,39 @@
+Cinema 
+5 - 10 Halls
+
+Cinema Halls
+Can be used for Events
+Can be used for movie screening
+
+Membership
+Collect Point (By Per ticket purchased)
+Point redeem for prize/promotion
+membership renewal = 2 free ticket (Standard Hall)
+Can Claim Prize/complimentary item during special promotions
+Claim 2 complimentary (Standard Hall) (When Birthday Month) [Management decide movie]
+
+Customers
+Book ticket for movie screening
+Book Cinema halls for events
+
+Hall Rental 
+per-hour basis/ half-day basis/ full-day basis
+
+Movie
+screened everyday from 11am to 11:30pm
+movie popularity determine :  number of screening per day, price of ticket
+
+Movie Schedules 
+prepared 2 week in advaned/ can be adjusted everyday
+
+Ticket Prices
+RM 15 - RM 35 per ticket (FOR MOVIE)
+Factor : 1) Day 2) Cinema Hall 3) Popularity Of Movie
+Bundle with food/drinks get special price
+
+Menu 
+for customer to add on food/ drinks when purchasing tickets
+
+
+
+
