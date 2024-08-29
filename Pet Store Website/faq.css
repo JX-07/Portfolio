@@ -1,0 +1,156 @@
+@font-face{
+    font-family:Comfortaa;
+    src: url(font/Comfortaa/Comfortaa-VariableFont_wght.ttf)
+}
+@font-face{
+    font-family:Lato;
+    src: url(font/Lato/Lato-Regular.ttf)
+}
+.pageIndicator *{
+    z-index:51;
+}
+div.container{
+    background-image: url(photo/bg.jpg);
+    background-size: 75rem;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+}
+#descriptionHead{
+    font-family: Comfortaa;
+    font-size: 2rem;
+    font-weight:bold;
+    margin-top:20vh;
+}
+
+.description div{
+    font-family:Comfortaa;
+    background-color:rgba(119,101,88,255);
+    color:white;
+    text-shadow: 0px 0px 1px white;
+    text-decoration: none;
+    width:300px;
+    height:60px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);    
+    margin-top: 10px;
+}
+.description div:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transform: scale(1.1);
+}
+.noline{
+    text-decoration: none;
+}
+.description *{
+    display: flex;
+}
+.faqList>div{
+    padding-top: 90px;
+}
+section{
+    background-color:white;
+    padding-bottom: 20vh;
+        flex-direction: column;
+    align-items: center;
+}
+#section1 {
+    display:flex;
+    min-height: 100vh;
+    width :80%;
+    margin: 0 auto;
+    background-image:linear-gradient(to bottom right,rgb(227,180,124),rgb(255, 245, 233));
+    box-shadow: 5px 5px 10px black;
+}
+#section2{
+    display:flex;
+    width:125%;
+    height: 20vh;
+    background-color: rgb(97,71,50);
+    padding: 0 0;
+    box-shadow: 1px 5px 5rem black;
+    z-index: 20;
+
+}
+#section3{ 
+    display:flex;
+    min-height: 30vh;
+    width:125%;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(photo/noteabackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 19;
+    box-shadow: 5px 5px 5rem black;
+
+}
+section h1{
+    font-size: 3rem;
+    margin: 3.5rem 0rem;
+}
+#section2 h1{
+    color: white;
+    text-shadow: 3px 1px 3px white;
+}
+.faq{
+    max-width:700px;
+    margin-top: 2rem;
+    border-bottom: 2px solid black; 
+    cursor: pointer;
+    padding-bottom: 1rem;
+    
+}
+.ques{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ques h3{
+    font-size: 1.8rem;
+}
+.ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+.ans p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.6rem;
+
+}
+@keyframes fade{
+    from{opacity: 0;}
+    to{opacity:1;}
+}
+.faq.active .ans{
+    max-height: 300px;
+    animation: fade 1s ease;
+}
+.faq.active svg{
+    transform: rotate(180deg);
+}
+
+svg{
+    transition: transform  0.5s ease-in-out;
+}
+
+.container h1{
+    font-family: Comfortaa;
+    font-weight: bold;
+}
+.container h2{
+    font-family: Lato;
+    font-size: 2.0rem;
+}
+.container h3{
+    font-family:Lato;
+    text-decoration: none;
+}

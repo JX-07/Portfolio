@@ -1,0 +1,233 @@
+@charset "utf-8";
+@import "layout.css";
+
+@font-face {
+    font-family: Comfortaa;
+    src: url(font/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(font/Lato/Lato-Regular.ttf)
+}
+
+/*Video (div 1)*/
+.videoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh;
+    background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(255, 238, 183)) ;
+}
+
+#video{
+    border-radius: 30px;
+    box-shadow: 1px 1px 5rem black;
+}
+
+#videoh1{
+    font-size: 8rem;
+
+}
+
+#videop1{
+    font-size: 2rem;
+    font-family: Comfortaa;
+}
+
+#videodiv2{
+    text-align: left;
+    padding-left:5vw ;
+}
+
+div.body-div {
+    background-color: white;
+}
+
+h1.aboutus-header {
+    font-size: 4em;
+}
+
+p.aboutus-p {
+    margin: 0;
+    font-size: 23px;
+}
+
+p {
+    font-family: Verdana, sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.footermain p {
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* "A Paw-sitive World" */
+div#padding-aboutus-div-1 {
+    padding-top: 11.5em;
+    padding-right: 5em;
+    padding-left: 5em;
+    height: 450px;
+    background-image: linear-gradient(to right, #ffeca5, #f6d560);
+    box-shadow: 5px 5px 5px black;
+    z-index: 6;
+}
+
+div#aboutus-div-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;
+    
+}
+
+h1#aboutus-header1 {
+    margin: 0px;
+    margin-bottom: 40px;
+    text-shadow: 1.5px 1.5px 5px rgb(254, 254, 168), 4px 3px 1px white;
+    font-size: 5em;
+    font-family: Brush Script MT, Brush Script Std;
+    width: 75%;
+}
+
+p#aboutus-p1 {
+    width: 85%;
+}
+
+img#golden-retriver {
+    border-radius: 7.5%;
+    width: 30em;
+    height: 20em;
+    box-shadow: 1px 1px 5rem black;
+}
+
+/* The Purr-fect Choice */
+div#aboutus-div-2 {
+    display: flex;
+    background-image: linear-gradient(to left, peachpuff, rgb(255, 171, 98));
+    padding-top: 100px;
+    padding-right: 5em;
+    padding-left: 5em;
+    padding-bottom: 5em;
+    height: 25em;
+    justify-content: space-between;
+    gap: 4em;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    
+    
+}
+
+img#comfort {
+    width: 30em;
+    height: 20em;
+    border-radius: 7.5%;
+    box-shadow: 1px 1px 5rem black;
+}
+
+h1#aboutus-header2 {
+    width: 40%;
+    text-align: center;
+    vertical-align: auto;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: black;
+    font-size: 5em;
+    margin-left: 50px;
+    text-shadow: 1.5px 1.5px 5px rgb(254, 228, 168), 4px 3px 1px white;
+}
+
+h1#purrfectchoice {
+    font-weight: normal;
+    font-size: 3.3em;
+
+}
+
+p.aboutus-p {
+    font-size: 24px;
+    font-family: "Lato", sans-serif;
+}
+
+hr#line1 {
+    height: 20em;
+    border-color: black;
+
+}
+
+span#purrfectchoice {
+    font-weight: bold;
+    font-size: larger;
+}
+
+/* Why US */
+div#WhyUs {
+    display: flex;
+    flex-direction: row;
+    background-color: #fbe8d7;
+    text-align: center;
+    align-items: center;
+}
+
+p#WHYUS {
+    font-family: Comfortaa, cursive;
+    color: black;
+    text-shadow: 1px 1px 1px black;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.whyusimg {
+    width: 10%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+div#aboutus-div-345 {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    padding: 10em 5em 10em 5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30em;
+    gap: 6em;
+    background-image: url(photo/background1.jpg);
+}
+
+div.aboutus-div-345 {
+    height: 35em;
+    width: 20em;
+    border: solid;
+    background: #f7f3e7;
+}
+
+h1.aboutus-header345 {
+    font-family: Comfortaa, cursive;
+    margin-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: black groove;
+}
+
+p.aboutus-p345 {
+    font-family: Lato, sans-serif;
+    margin: 1em 1em auto 1em;
+    font-size: larger;
+
+}
+
+/* Image Before Footer */
+div#imgbeforefooter {
+    display: flex;
+    overflow: hidden;
+}
+
+.imgbffooter {
+    width: 17.6em;
+    aspect-ratio: 1;
+
+
+}

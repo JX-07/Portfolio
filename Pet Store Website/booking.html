@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="booking.css" />
+    <link rel="icon" href="photo/Furry_Paws.png">
+    <script src="booking.js"></script>
+</head>
+
+<body>
+    <!--HEADER START-->
+    <div class="header">
+        <div class="header-left">
+            <a href="main.html"><img id="furry-paws-logo" src="photo/Furry_Paws.png"></a>
+            <a href="aboutus.html">About&nbsp;Us</a>
+            <a href="product.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="faq.html">FAQ</a>
+            <a href="customerfeedback.html">Feedback</a>
+        </div>
+        <div class="header-right">
+            <input id="search-input" type="text" placeholder="What are you looking for?">
+            <a href="#search"><img id="search-logo" src="photo/search.png"></a>
+        </div>
+    </div>
+    <!--EMPTY SPACE (HEADER)-->
+    <div id="header-empty">&nbsp;</div>
+    <!--EMPTY SPACE (HEADER)-->
+
+    <!--HEADER END-->
+
+    <!--BODY START-->
+    <form id="booking-form">
+        <div class="grid_container">
+            <div class="grid_item_1">
+                <div class="pet_choice">
+                    <div id="bg_circle">
+                        <div id="pet_circle_cat"></div>
+                        <div id="pet_circle_dog"></div>
+                    </div>
+                </div>
+                <span style="margin-top: 20px; display: block; font-size: 30px; float: left; padding-top: 17px;">Pet
+                    Type:</span>
+                <label class="image-radio">
+                    <input type="radio" name="pet-type" id="type_cat" value="cat">
+                    <div id="cat">Cat</div>
+                </label>
+                <label class="image-radio">
+                    <input type="radio" name="pet-type" id="type_dog" value="dog">
+                    <div id="dog">Dog</div>
+                </label>
+            </div>
+
+
+            <div class="grid_item_2">
+                <div>
+                    <label for="pet-name">Pet Name:</label>
+                    <input type="text" id="pet-name" name="pet-name" required>
+                </div>
+
+                <div>
+                    <label for="appointment-date">Appointment Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" min="2023-09-11" required>
+                    <script>
+                        // Get the current date
+                        const currentDate = new Date();
+
+                        // Calculate the minimum date (1 week later)
+                        const minDate = new Date(currentDate);
+                        minDate.setDate(currentDate.getDate() + 7);
+
+                        // Convert the minimum date to the format YYYY-MM-DD
+                        const minDateFormatted = minDate.toISOString().split('T')[0];
+
+                        // Set the min attribute of the date input field to the minimum date
+                        document.getElementById("appointment-date").setAttribute("min", minDateFormatted);
+                    </script>
+                </div>
+
+                <div>
+                    <label for="appointment-time">Preferred Appointment Time:</label>
+                    <input type="time" id="appointment-time" name="appointment-time" min="09:00" max="18:00">
+                </div>
+
+                <div>
+                    <label for="owner-name">Your Name:</label>
+                    <input type="text" id="owner-name" name="owner-name" required>
+                </div>
+
+                <div>
+                    <label for="owner-email">Your Email:</label>
+                    <input type="email" id="owner-email" name="owner-email" required>
+                </div>
+
+                <div>
+                    <label for="owner-phone">Your Phone Number:</label>
+                    <input type="tel" id="owner-phone" name="owner-phone" required>
+                </div>
+            </div>
+        </div>
+        <div class="service_choice">
+            <div>
+                <label for="group">Group:</label>
+                <select name="group" id="group">
+                    <option value="basic">Basic</option>
+                    <option value="addOn">Add-on</option>
+                </select>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <select name="category" id="category"></select>
+            </div>
+            <div>
+                <label for="size">Size:</label>
+                <select name="size" id="size"></select>
+            </div>
+
+            <div>
+                <button type="submit">Book Now</button>
+            </div>
+        </div>
+    </form>
+    <!--BODY END-->
+    <!--FOOTER START-->
+    <footer>
+        <div class="footermain">
+            <div class="footer1">
+                <nav id="footer-aboutus">
+                    <p class="footer1mainp"><a href="main.html">About Hairy Paws</a></p>
+                    <ul>
+                        <li>
+                            <p class="footer1subp"><a href="aboutus.html">About Us</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="faq.html">FAQs</a></p>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="footer-product">
+                    <p class="footer1mainp"><a href="product.html">Products</a></p>
+                    <ul>
+                        <li>
+                            <p class="footer1subp"><a href="product1.html">Pet Food</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="product2.html">Pet Toys</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="product3.html">Pet Accessories</a></p>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="footer-services">
+                    <p class="footer1mainp"><a href="services.html">Services</a></p>
+                    <ul>
+                        <li>
+                            <p class="footer1subp"><a href="services.html#groom_dog">Dog Grooming</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="services.html#groom_cat">Cat Grooming</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="booking.html" target="_blank">Booking</a></p>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="footer-contact">
+                    <p class="footer1mainp"><a href="">Contact Us</a></p>
+                    <ul>
+                        <li>
+                            <p class="footer1subp"><a href="tel:+60164151420" target="_blank">Voice Call</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="https://wa.me/60164151420" target="_blank">Whatsapp</a></p>
+                        </li>
+                        <li>
+                            <p class="footer1subp"><a href="mailto:khorhs2004@gmail.com" target="_blank">Email</a></p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+            <div class="footer2">
+                <div class="payment">
+                    <img id="footer2img" src="photo/Hairy Paws font.png" />
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com"><img src="photo/facebook.png" width="40px"></a>
+                    <a href="https://www.instagram.com"><img src="photo/instagram.png" width="40px"></a>
+                    <a href="https://www.twitter.com"><img src="photo/twitter.png" width="40px"></a>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer-end">
+            <p>Paws, Play, Love, Repeat!</p>
+        </div>
+    </footer>
+    <!--FOOTER END-->
+</body>
+
+</html>

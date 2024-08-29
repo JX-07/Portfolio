@@ -1,0 +1,46 @@
+body h2{
+    font-size: 80px;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+
+
+body div.aboutus{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}
+body div.shop{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}
+body div.grooming{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}
+body div.faq{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}
+
+body div.feedback{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}
+
+body div.location{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    color: bisque;
+}

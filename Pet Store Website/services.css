@@ -1,0 +1,185 @@
+@font-face {
+    font-family: against;
+    src: url(font//against/against\ regular.ttf);
+    src: url(font/against/against\ regular.otf);
+}
+
+@font-face {
+    font-family: slagless;
+    src: url(font/Slagless/Slagless-2OX63.ttf);
+    src: url(font/Slagless/Slagless-K75AZ.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.description {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right, #ffeca5, #f6d560);
+    padding-top: 80px;
+    padding-bottom: 150px;
+}
+
+.description>h1 {
+    font-family: against;
+    font-size: 50px;
+}
+
+.description>p {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    width: 70%;
+    font-size: 30px;
+}
+
+.nav_groom {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.nav_groom #dog,
+.nav_groom #cat {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 30px;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    font-size: 30px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 5px gold);
+    transition: 0.7s;
+}
+
+.nav_groom #dog:hover,
+.nav_groom #cat:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav_groom a {
+    text-decoration: none;
+}
+
+.groom_dog {
+    display: flex;
+    justify-content: left;
+    background-image: linear-gradient(to left, #062A78 0%, #001B69 100%);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.groom_cat {
+    display: flex;
+    justify-content: left;
+    background-image: linear-gradient(to right, #EED202 0%, #DFC300 100%);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#dog_measurement,
+#cat_measurement {
+    display: flex;
+    justify-content: left;
+    width: 320px;
+    height: 320px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#dog_measurement_2 table,
+#cat_measurement_2 table {
+    border: 2px solid white;
+    border-collapse: collapse;
+    margin: 20px;
+    background-color: white;
+    width: 320px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#dog_price table,
+#cat_price table {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 20px;
+    background-image: url(photo/bg.jpg);
+    background-size: contain;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#dog_measurement_2 tr,
+#dog_measurement_2 td,
+#dog_measurement_2 th,
+#cat_measurement_2 tr,
+#cat_measurement_2 td,
+#cat_measurement_2 th {
+    border: 2px solid black;
+}
+
+#booking {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: 30px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 5px black);
+    transition: 0.5s;
+}
+
+#groom_dog a,
+#groom_cat a {
+    text-decoration: none;
+}
+
+#booking:hover {
+    background-color: green;
+}
+
+#dog_price tr,
+#dog_price td,
+#dog_price th,
+#cat_price tr,
+#cat_price td,
+#cat_price th {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 10px;
+}
+
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(1),
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(2),
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(3),
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(1),
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(2),
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(3) {
+    text-align: left;
+}
+
+
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(1):before,
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(2):before,
+#dog_price table tr:not(:first-of-type) td:nth-last-of-type(3):before,
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(1):before,
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(2):before,
+#cat_price table tr:not(:first-of-type) td:nth-last-of-type(3):before {
+    text-align: left;
+    content: "RM ";
+}

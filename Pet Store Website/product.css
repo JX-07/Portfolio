@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+html {
+    background-image: url(photo/bg.jpg);
+    background-size: contain;
+}
+
+.food {
+    margin-left: 55px;
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+.toys {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+.accessories {
+    float: left;
+    width: 30%;
+    padding: 5px;
+}
+
+.petfood {
+    width: 450px;
+    height: 700px;
+
+}
+
+.pettoys {
+    width: 450px;
+    height: 700px;
+
+}
+
+.petaccessories {
+    width: 450px;
+    height: 700px;
+
+}
+
+.food {
+    position: relative;
+    width: 30%;
+}
+
+.petfood {
+    display: block;
+    width: 100%;
+}
+
+.food_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.food_overlay:hover {
+    opacity: 1;
+}
+
+.food_title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.food_description {
+    font-size: 1.5em;
+}
+
+.toys {
+    position: relative;
+    width: 30%;
+}
+
+.pettoys {
+    display: block;
+    width: 100%;
+}
+
+.toys_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.toys_overlay:hover {
+    opacity: 1;
+}
+
+.toys_title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.toys_description {
+    font-size: 1.5em;
+}
+
+.accessories {
+    position: relative;
+    width: 30%;
+}
+
+.petaccessories {
+    display: block;
+    width: 100%;
+}
+
+.accessories_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.accessories_overlay:hover {
+    opacity: 1;
+}
+
+.accessories_title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.accessories_description {
+    font-size: 1.5em;
+}

@@ -1,0 +1,89 @@
+@font-face{
+    font-family: Comfortaa;
+    src: url(font/Comfortaa/Comfortaa-VariableFont_wght.ttf)
+}
+@font-face{
+    font-family: Lato;
+    src: url(font/Lato/Lato-Regular.ttf)
+}
+div{
+    margin:0 0;
+    padding:0 0;
+}.container{
+    background-color:white;
+    padding-bottom: 20vh;
+}
+.divmain1{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+div.divsub1 img{
+    display:flex;
+    flex-direction:row;
+    object-fit: cover;
+    align-items: top;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+div.divsub1 img:hover{
+    box-shadow: 1px 1px 3rem black;
+    transform: scale(1.05);
+
+}
+.imgDescript{
+    font-family: Comfortaa;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    border: 1px solid black;
+    background-color: rgb(102, 76, 63);
+    color:white;
+    text-shadow: 1px 1px 1px white;
+
+}
+.div2 {
+    display:flex;
+    margin: 5vh 5vw;
+    margin-top:  20vh;
+    padding-right: 10vw;
+    box-shadow: 1px 1px 8px black;
+
+}
+.div2 h2{
+    margin: 8vh 10vw;
+    font-family: Comfortaa;
+    font-size: 4rem;
+    height: 10vh;
+    width: 20vw;
+    text-shadow: 1px 1px 2px black, 1px 1px 3px black;
+}
+.div2 div{
+    font-family: Lato,sans-serif;
+    margin-left: 5vw;
+    font-size: 1.5rem
+}
+.div2 p{
+    font-family: Lato,sans-serif;
+    margin-left: 5vw;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+#mail img,#phone img,#message img{
+    width: 30vw;
+}
+#mail h2,#phone h2,#message h2{
+    margin: 5vh 5vw;
+}
+.social{
+    height:35px;
+    width:35px !important;
+}
+#message *{
+    vertical-align: middle;
+    text-decoration: none;
+}

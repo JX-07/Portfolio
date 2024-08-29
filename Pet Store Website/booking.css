@@ -1,0 +1,143 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#booking-form {
+    background-image: linear-gradient(to left, #ECCDB1 0%, #DAA06D 100%);
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+    margin: auto;
+    filter: drop-shadow(0 0 5px black);
+}
+
+#booking-form * {
+    margin-left: 20px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid_item_1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 20%, white 50%, rgba(255, 255, 255, 0.3) 80%);
+    filter: drop-shadow(0 0 5px white);
+    border-radius: 50px;
+}
+
+.grid_item_2 {
+    padding-top: 10px;
+    font-size: 25px;
+    line-height: 80px;
+    background-image: linear-gradient(to right, white 0%, transparent 90%);
+    border-radius: 50px;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.pet_choice #bg_circle {
+    position: relative;
+    background-image: linear-gradient(to bottom right, rgba(251, 192, 147, 1) 0%, orange 50%, rgba(251, 192, 147, 1) 100%);
+    width: 320px;
+    height: 320px;
+    border-radius: 320px;
+    margin: 0px;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.pet_choice #pet_circle_cat {
+    position: absolute;
+    background-image: url(photo/cat_choice.png);
+    background-color: beige;
+    filter: drop-shadow(0 0 5px black);
+    width: 280px;
+    height: 280px;
+    border: 1px;
+    border-radius: 280px;
+    margin: 20px;
+    background-position: center;
+    background-size: contain;
+    display: none;
+}
+
+.pet_choice #pet_circle_dog {
+    position: absolute;
+    background-image: url(photo/dog_choice.png);
+    background-color: beige;
+    filter: drop-shadow(0 0 5px black);
+    width: 280px;
+    height: 280px;
+    border: 1px;
+    border-radius: 280px;
+    margin: 20px;
+    background-position: center;
+    background-size: contain;
+    display: none;
+}
+
+.image-radio #cat,
+.image-radio #dog {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 40px;
+    background-color: white;
+    width: 80px;
+    height: 40px;
+    padding-top: 5px;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    transition: 200ms ease-in;
+}
+
+.image-radio #cat:hover,
+.image-radio #dog:hover {
+    background-color: #7fe4c7;
+    cursor: pointer;
+}
+
+.image-radio input[type="radio"] {
+    display: none;
+}
+
+input {
+    height: 40px;
+    background-color: #FDEFB2;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button {
+    height: 40px;
+    width: 96%;
+    margin-bottom: 30px;
+    transition: 1s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+select {
+    height: 40px;
+    width: 96%;
+    margin-bottom: 30px;
+    transition: 1s;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.service_choice {
+    width: 97%;
+    margin-top: 30px;
+    padding-top: 20px;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 20%, white 50%, rgba(255, 255, 255, 0.3) 80%);
+    filter: drop-shadow(0 0 5px white);
+    border-radius: 50px;
+    font-size: 25px;
+}
